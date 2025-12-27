@@ -53,7 +53,7 @@ pipeline {
       }
     }
 
-    stage('Deploy on EC2') {
+ stage('Deploy on EC2') {
   steps {
     sshagent(['ec2-ssh']) {
       withCredentials([
@@ -79,13 +79,15 @@ pipeline {
             docker run -d --name backend -p 7000:7000 \
               $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$ECR_BACKEND:latest &&
 
-            docker run -d --name frontend -p 3000:4173 \
+            docker run -d --name frontend -p 3000:80 \
               $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$ECR_FRONTEND:latest
           "
         '''
       }
     }
   }
+}
+
 }
 
   }
