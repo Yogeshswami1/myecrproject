@@ -1,0 +1,30 @@
+.list {
+  margin-top: 20px;
+}
+
+.item {
+  background: rgba(255, 255, 255, 0.65);
+  padding: 12px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  transition: 0.3s ease;
+}
+
+.item:hover {
+  transform: scale(1.04);
+}
+
+.amount {
+  font-weight: bold;
+  color: green;
+}
+
+.delete {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
