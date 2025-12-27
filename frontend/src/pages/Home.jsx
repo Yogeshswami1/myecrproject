@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <Card>
       <h2 style={{ textAlign: "center", color: "white", marginBottom: "20px" }}>
-        💸 Expense Tracker
+        💸 Expense Tracker of Yogesh Kumar
       </h2>
 
       <ExpenseForm refresh={loadData} />
